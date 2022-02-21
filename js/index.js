@@ -13,3 +13,14 @@ btn.addEventListener("click", () => {
     })
 
 })
+
+btn.addEventListener("touchstart", () => {
+
+    boxMenu.classList.toggle("actived")
+    item.forEach( e => {
+
+        e.classList.toggle("item")
+        
+    })
+
+})
