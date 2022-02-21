@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;   
+    font-family: 'Roboto', sans-serif; 
+}
+
+:root{
+    --waith: #F0F0F2;
+    --blue3: #010D26;
+    --blue2: #021740;
+    --blue1: #1E5CD9;
+    --green: #93BF34;
+
+    --fontRoboto: 'Roboto', sans-serif; 
+}
+
+.body-text{
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+/* header --------------------------------------------- */
+header{
+    width: 100%;
+    height: 100px;
+    background-color: var(--blue3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title-header{
+    color: var(--waith);
+    font-size: 36px;
+    font-family: var(--fontRoboto);
+}
+
+.menu-header{
+    width: 46px;
+    height: 34px;
+    background-color: transparent;
+}
+
+.menu-header .line{
+    background-color: var(--green);
+    width: 28px;
+    margin: 5px;
+    border: 3px solid var(--green);}
+
+/* about ------------------------------------------------- */
+.about{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.title-about {
+    font-family: var(--fontRoboto);
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: var(--blue2);
+}
+
+.about img{
+    margin-top: 20px;
+
+}
+
+.text-about{
+    margin-top: 20px;
+    list-style-type: disc;
+    font-family: var(--fontRoboto);
+    font-size: 18px;
+    color: var(--blue2);
+    margin-left: 20px;
+    border: solid 2px var(--blue1);
+    border-radius: 20px;
+}
+
+.text-about ul{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    list-style-position: inside;
+}
+
+.text-about ul li{
+    margin-bottom: 10px;
+}
+
+/* skills ------------------------------------------------- */
+.skills{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.titlesk{
+    font-size: 36px;
+    font-family: var(--fontRoboto);
+    color: var(--blue2);
+    font-weight: bold;
+    text-align: center;
+}
+
+.skills .conteiner{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+
+.skills .sk {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px var(--blue1);
+    background-color: var(--waith);
+} 
+
+/* projetos ------------------------------------------------- */
+.projetos{
+
+    margin: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.projetos .title-pj{
+    font-family: var(--fontRoboto);
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--blue2);
+}
+
+.projetos .pj{
+    width: 180px;
+    height: 180px;
+    border: solid 2px var(--blue1);
+}
+
+/* contatic ------------------------------------------------- */
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    grid-template-rows:  repeat(3, 3fr);
+    gap: 20px;
+}
+.contact .title-ct{
+    font-family: var(--fontRoboto);
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--blue2);
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact a{
+    width: 80px;
+    height: 80px;
+    border: solid var(--blue1) 2px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* contatic ------------------------------------------------- */
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: var(--blue3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+footer .copyhight{
+    color: var(--waith);
+    font-size: 36px;
+    font-family: var(--fontRoboto);
+    font-weight: bold;
+}
+
+
