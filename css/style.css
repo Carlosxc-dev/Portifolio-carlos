@@ -20,6 +20,9 @@
     --font2: 3em;
     --font3: 2em;
     --font4: 1em;
+
+    --shadow: 2px 2px 5px rgba(0, 0, 0, 0.603), -2px -2px 5px rgba(0, 0, 0, 0.521);
+    --shadow2: -2px 2px 5px rgba(0, 0, 0, 0.486);
 }
 
 .body-text{
@@ -71,7 +74,7 @@ header{
 
 .title-about {
     font-family: var(--fontRoboto);
-    font-size: var(--font2);
+    font-size: var(--font3);
     font-weight: bold;
     margin-top: 20px;
     color: var(--blue2);
@@ -80,7 +83,8 @@ header{
 
 .about img{
     margin-top: 20px;
-
+    border-radius: 50%;
+    box-shadow: var(--shadow2);
 }
 
 .text-about{
@@ -141,6 +145,7 @@ header{
     align-items: center;
     border: solid 2px var(--blue1);
     padding: 10px;
+    box-shadow: var(--shadow2);
 
 } 
 
@@ -168,6 +173,7 @@ header{
     height: 180px;
     border: solid 2px var(--blue1);
     cursor: pointer;
+    box-shadow: var(--shadow);
 }
 
 /* contatic ------------------------------------------------- */
@@ -199,6 +205,8 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: var(--shadow2);
+
 }
 
 .circle{
@@ -222,7 +230,7 @@ footer{
 
 footer .copyhight{
     color: var(--waith);
-    font-size: var(--font2);
+    font-size: var(--font3);
     font-family: var(--fontRoboto);
     font-weight: bold;
     width: 100%;
