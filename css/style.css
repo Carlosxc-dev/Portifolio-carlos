@@ -132,7 +132,8 @@ header{
     justify-content: center;
     align-items: center;
     border: solid 2px var(--blue1);
-    background-color: var(--waith);
+    padding: 10px;
+
 } 
 
 /* projetos ------------------------------------------------- */
