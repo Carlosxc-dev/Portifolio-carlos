@@ -15,6 +15,11 @@
     --green: #93BF34;
 
     --fontRoboto: 'Roboto', sans-serif; 
+
+    --font1: 48px;
+    --font2: 36px;
+    --font3: 24px;
+    --font4: 18px;
 }
 
 .body-text{
@@ -31,20 +36,22 @@ header{
     height: 100px;
     background-color: var(--blue3);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 .title-header{
     color: var(--waith);
-    font-size: 36px;
+    font-size: var(--font2);
     font-family: var(--fontRoboto);
+    margin-left: 20px;
 }
 
 .menu-header{
     width: 46px;
     height: 34px;
     background-color: transparent;
+    margin-right: 20px;
 }
 
 .menu-header .line{
@@ -64,7 +71,7 @@ header{
 
 .title-about {
     font-family: var(--fontRoboto);
-    font-size: 36px;
+    font-size: var(--font2);
     font-weight: bold;
     margin-top: 20px;
     color: var(--blue2);
@@ -79,7 +86,7 @@ header{
     margin-top: 20px;
     list-style-type: disc;
     font-family: var(--fontRoboto);
-    font-size: 18px;
+    font-size: var(--font4);
     color: var(--blue2);
     margin-left: 20px;
     border: solid 2px var(--blue1);
@@ -111,7 +118,7 @@ header{
 }
 
 .titlesk{
-    font-size: 36px;
+    font-size: var(--font1);
     font-family: var(--fontRoboto);
     color: var(--blue2);
     font-weight: bold;
@@ -150,7 +157,7 @@ header{
 
 .projetos .title-pj{
     font-family: var(--fontRoboto);
-    font-size: 36px;
+    font-size: var(--font1);
     font-weight: bold;
     color: var(--blue2);
 }
@@ -159,6 +166,7 @@ header{
     width: 180px;
     height: 180px;
     border: solid 2px var(--blue1);
+    cursor: pointer;
 }
 
 /* contatic ------------------------------------------------- */
@@ -170,7 +178,7 @@ header{
 }
 .contact .title-ct{
     font-family: var(--fontRoboto);
-    font-size: 36px;
+    font-size: var(--font1);
     font-weight: bold;
     color: var(--blue2);
     text-align: center;
@@ -196,10 +204,11 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
 }
 
-/* contatic ------------------------------------------------- */
+/* footer ------------------------------------------------- */
 footer{
     width: 100%;
     height: 150px;
@@ -212,9 +221,18 @@ footer{
 
 footer .copyhight{
     color: var(--waith);
-    font-size: 36px;
+    font-size: var(--font2);
     font-family: var(--fontRoboto);
     font-weight: bold;
 }
 
+#green{
+    color: var(--green);
+    border: solid 2px var(--green);
+}
+
+p{
+    color: var(--green);
+    display: inline;
+}
 
