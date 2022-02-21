@@ -5,6 +5,7 @@
     padding: 0;
     text-decoration: none;   
     font-family: 'Roboto', sans-serif; 
+    color: var(--blue3);
 }
 
 :root{
@@ -51,17 +52,19 @@ header{
 }
 
 .menu-header{
-    width: 46px;
-    height: 34px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
     background-color: transparent;
     margin-right: 20px;
 }
 
 .menu-header .line{
-    background-color: var(--green);
-    width: 28px;
-    margin: 5px;
-    border: 3px solid var(--green);}
+    width: 30px;
+    border: solid 2px var(--green);
+    margin: 8px;
+}
 
 /* about ------------------------------------------------- */
 .about{
@@ -224,7 +227,7 @@ footer{
     height: 150px;
     background-color: var(--blue3);
     display: flex;
-    justify-content: center;
+    justify-content:  center;
     align-items: center;
     margin-top: 20px;
 }
@@ -235,7 +238,7 @@ footer .copyhight{
     font-family: var(--fontRoboto);
     font-weight: bold;
     width: 100%;
-    overflow: hidden;
+    text-align: center;
 }
 
 #green{
@@ -246,5 +249,32 @@ footer .copyhight{
 p{
     color: var(--green);
     display: inline;
+}
+
+
+@keyframes mover {
+    0% { width: 0px}
+    100% {width: 50%};
+    
+}
+
+.actived{
+    height: 100vh;
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    background-color: var(--blue3);
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: flex-start;
+    align-items: center;
+    animation: mover 0.5s 1 ease normal forwards;
+}
+
+.item{
+    padding: 20px 5px;
+    font-family: var(--fontRoboto);
+    font-size: var(--font3);
+    color: var(--waith);
 }
 
