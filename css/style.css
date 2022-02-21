@@ -16,10 +16,10 @@
 
     --fontRoboto: 'Roboto', sans-serif; 
 
-    --font1: 48px;
-    --font2: 36px;
-    --font3: 24px;
-    --font4: 18px;
+    --font1: 4em;
+    --font2: 3em;
+    --font3: 2em;
+    --font4: 1em;
 }
 
 .body-text{
@@ -75,6 +75,7 @@ header{
     font-weight: bold;
     margin-top: 20px;
     color: var(--blue2);
+    overflow: hidden;
 }
 
 .about img{
@@ -224,6 +225,8 @@ footer .copyhight{
     font-size: var(--font2);
     font-family: var(--fontRoboto);
     font-weight: bold;
+    width: 100%;
+    overflow: hidden;
 }
 
 #green{
