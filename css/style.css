@@ -45,7 +45,7 @@ header{
 
 .title-header{
     color: var(--waith);
-    font-size: var(--font2);
+    font-size: var(--font3);
     font-family: var(--fontRoboto);
     margin-left: 20px;
 }
@@ -88,27 +88,28 @@ header{
 }
 
 .text-about{
-    margin-top: 20px;
     list-style-type: disc;
     font-family: var(--fontRoboto);
-    font-size: var(--font3);
+    font-size: 20px;
+    margin-top: 20px;
     color: var(--blue2);
-    margin-left: 20px;
     border: solid 2px var(--blue1);
     border-radius: 20px;
+    width: 100%;
+
 }
 
 .text-about ul{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 10px;
     list-style-position: inside;
 }
 
 .text-about ul li{
-    margin-bottom: 10px;
+    padding: 10px;
 }
 
 /* skills ------------------------------------------------- */
@@ -123,7 +124,7 @@ header{
 }
 
 .titlesk{
-    font-size: var(--font1);
+    font-size: var(--font2);
     font-family: var(--fontRoboto);
     color: var(--blue2);
     font-weight: bold;
@@ -163,7 +164,7 @@ header{
 
 .projetos .title-pj{
     font-family: var(--fontRoboto);
-    font-size: var(--font1);
+    font-size: var(--font2);
     font-weight: bold;
     color: var(--blue2);
 }
@@ -185,7 +186,7 @@ header{
 }
 .contact .title-ct{
     font-family: var(--fontRoboto);
-    font-size: var(--font1);
+    font-size: var(--font2);
     font-weight: bold;
     color: var(--blue2);
     text-align: center;
