@@ -1,6 +1,6 @@
 let btn = document.querySelector(".menu-header")
 let boxMenu = document.querySelector(".boxMenu")
-let item = document.querySelectorAll(".boxMenu > div")
+let item = document.querySelectorAll(".boxMenu > a > div")
 
 
 // btn.addEventListener("click", () => {
@@ -14,7 +14,7 @@ let item = document.querySelectorAll(".boxMenu > div")
 
 // })
 
-btn.addEventListener("touchstart", () => {
+btn.addEventListener("touchp", () => {
 
     boxMenu.classList.toggle("actived")
     item.forEach( e => {
