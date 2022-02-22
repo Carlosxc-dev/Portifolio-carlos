@@ -1,7 +1,7 @@
 let btn = document.querySelector(".menu-header");
 let boxMenu = document.querySelector(".boxMenu");
 let item = document.querySelectorAll(".boxMenu > a > div");
-let eventos = "touchstar click onmauseover"
+let eventos = "touchstart click mauseover"
 
 
 
