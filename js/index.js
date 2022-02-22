@@ -1,26 +1,24 @@
-let btn = document.querySelector(".menu-header")
-let boxMenu = document.querySelector(".boxMenu")
-let item = document.querySelectorAll(".boxMenu > a > div")
+let btn = document.querySelector(".menu-header");
+let boxMenu = document.querySelector(".boxMenu");
+let item = document.querySelectorAll(".boxMenu > a > div");
+let eventos = "touchstar click onmauseover"
 
 
-// btn.addEventListener("click", () => {
 
-//     boxMenu.classList.toggle("actived")
-//     item.forEach( e => {
-
-//         e.classList.toggle("item")
+function multiplosEventos(e){
+    
+    e.split(' ').forEach(event => {
         
-//     })
+        btn.addEventListener(event, () => {
 
-// })
+            boxMenu.classList.toggle("actived")
 
-btn.addEventListener("touchp", () => {
+            item.forEach(elem => {
 
-    boxMenu.classList.toggle("actived")
-    item.forEach( e => {
-
-        e.classList.toggle("item")
-        
+                elem.classList.toggle("item")
+            })
+        });
     })
+}
 
-})
+multiplosEventos(eventos);
