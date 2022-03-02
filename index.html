@@ -1,140 +1,205 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portifolio</title>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-</head>
-
-<body>
-
-
+  <body>
     <header>
-        <div class="title-header">Portifolio</div>
-        <div class="menu-header">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
+      <div class="conteiner-header">
+        <h1>Portifolio</h1>
 
-        <div class="boxMenu">
-
-            <a href="#about">
-                <div>about</div>
-            </a>
-            <a href="#skills">
-                <div>skills</div>
-            </a>
-            <a href="#project">
-                <div>project</div>
-            </a>
-            <a href="#contact">
-                <div>contact</div>
-            </a>
-            
-        </div>
-    </header>
-    <div class="body-text">
-
-        <section class="about" id="about">
-            <img src="img/img-about.png" alt="autor foto">
-
-            <div class="title-about"><p>C</p>arlos <p>H</p>enrique</div>
-
-            <div class="text-about">
-                <ul>
-                    <li>Iniciante no mundo front end</li>
-                    <li>Moro em Minas Gerais - Brasil</li>
-                    <li>Graduando em Engenharia da computação - UNIFEI</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="skills" id="skills">
-
-            <div class="titlesk">Habilidades</div>
-
-            <div class="conteiner">
-                <img class="sk" id="green" src="img/html-5.png" alt="logohtml" height="100px " width="100px">
-                <img class="sk" class="green" src="img/css-3.png" alt="logohtml" height="100px " width="100px">
-                <img class="sk" id="green" src="img/script-java.png" alt="logohtml" height="100px " width="100px">
-                <img class="sk" src="img/iconSass.png" alt="logohtml" height="100px " width="100px">
-                <img class="sk" id="green" src="img/letra-c.png" alt="logohtml" height="100px " width="100px">
-                <img class="sk" src="img/icongithub-skills.png" alt="logohtml" height="100px " width="100px">
-
-
-            </div>
-        </section>
-
-        <section class="projetos" id="project">
-
-            <div class="title-pj">Projetos</div>
-
-            <a class="pj" id="green" href="https://carlosxc-dev.github.io/projeto_site_estruturaDados/" target="_blank">
-                <img  src="img/logoSiteED.jpg" alt="logosite">
-            </a>
-
-            <a class="pj" href="https://carlosxc-dev.github.io/projeto_site_cordel/" target="_blank">
-                <img  src="img/sitecordel.jpg" alt="logosite" >
-            </a>
-
-            <a class="pj" id="green" href="https://github.com/Carlosxc-dev/projeto_calculadora" target="_blank">
-                <img  src="img/calculadora.jpg" alt="logosite">
-            </a>
-
-            <a class="pj" href="https://carlosxc-dev.github.io/Portifolio-carlos/" target="_blank">
-                <img  src="img/siteportifolio.jpg" alt="logosite">
-            </a>
-            
-        </section>
-
-        <nav class="contact" id="contact">
-
-            <div class="title-ct">Contatos</div>
-
-            <!-- twitter -->
-            <div class="circle">
-
-                <a href="https://twitter.com/home" target="_blank"><img src="img/twitter.png" alt="logo twitter"height="50" width="50"></a>
-
-            </div>
-
-            <!-- github -->
-            <div class="circle">
-
-                <a id="green" href="https://github.com/Carlosxc-dev" target="_blank"><img src="img/github.png" alt="logo github" height="50" width="50"></a>
-
-            </div>
-
-
-            <!-- instagran -->
-            <div class="circle">
-
-                <a href="https://www.instagram.com/carloshenriquecruzxavier/" target="_blank"><img src="img/instagram.png" alt="logo instagram" height="50" width="50"></a>
-                
-            </div>
-        
-            <!-- linkedin -->
-            <div class="circle">
-
-                <a id="green" href="https://www.linkedin.com/in/carlos-henrique-a65a54158/" target="_blank"><img src="img/linkedin.png" alt="logo linkedin" height="50" width="50"></a>
-                
-            </div>
-            
-            
+        <nav class="menu">
+          <a href="#about"> about </a>
+          <a href="#skills"> skills </a>
+          <a href="#project"> project </a>
+          <a href="#contact"> contact </a>
         </nav>
-    </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="about" id="about">
+        <img src="img/img-about.png" alt="autor foto" />
+
+        <div class="conteiner">
+          <h1>Olá, sou Carlos Henrique</h1>
+          <ul>
+            <li>Iniciante no mundo front end</li>
+            <li>Moro em Minas Gerais - Brasil</li>
+            <li>Graduando em Engenharia da computação</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="project" id="project">
+        <h1>Projetos</h1>
+        <div class="conteiner">
+          <a
+            class="card"
+            id="green"
+            href="https://carlosxc-dev.github.io/projeto_site_estruturaDados/"
+            target="_blank"
+          >
+            <img src="img/logoSiteED.jpg" alt="logosite" />
+          </a>
+          <a
+            class="card"
+            href="https://carlosxc-dev.github.io/projeto_site_cordel/"
+            target="_blank"
+          >
+            <img src="img/sitecordel.jpg" alt="logosite" />
+          </a>
+          <a
+            class="card"
+            id="green"
+            href="https://github.com/Carlosxc-dev/projeto_calculadora"
+            target="_blank"
+          >
+            <img src="img/calculadora.jpg" alt="logosite" />
+          </a>
+          <a
+            class="card"
+            href="https://carlosxc-dev.github.io/Portifolio-carlos/"
+            target="_blank"
+          >
+            <img src="img/siteportifolio.jpg" alt="logosite" />
+          </a>
+        </div>
+      </section>
+
+      <section class="skills" id="skills">
+        <h1>habilidades</h1>
+
+        <div class="conteiner">
+          <div class="card">
+            <img
+              class="sk"
+              id="green"
+              src="img/html-5.png"
+              alt="logohtml"
+              height="150px "
+              width="150px"
+            />
+          </div>
+          <div class="card">
+            <img
+              class="sk"
+              class="green"
+              src="img/css-3.png"
+              alt="logohtml"
+              height="150px "
+              width="150px"
+            />
+          </div>
+          <div class="card">
+            <img
+              class="sk"
+              id="green"
+              src="img/script-java.png"
+              alt="logohtml"
+              height="150px "
+              width="150px"
+            />
+          </div>
+          <div class="card">
+            <img
+              class="sk"
+              src="img/iconSass.png"
+              alt="logohtml"
+              height="150px "
+              width="150px"
+            />
+          </div>
+          <div class="card">
+            <img
+              class="sk"
+              id="green"
+              src="img/letra-c.png"
+              alt="logohtml"
+              height="150px "
+              width="150px"
+            />
+          </div>
+          <div class="card">
+            <img
+              class="sk"
+              src="img/icongithub-skills.png"
+              alt="logohtml"
+              height="150px "
+              width="150px"
+            />
+          </div>
+          <div class="card">
+            <img
+              class="sk"
+              src="img/icongithub-skills.png"
+              alt="logohtml"
+              height="150px "
+              width="150px"
+            />
+          </div>
+        </div>
+      </section>
+
+      <nav class="contact" id="contact">
+        <h1>Contatos</h1>
+
+        <div class="conteiner">
+          <!-- twitter -->
+
+          <a href="https://twitter.com/home" target="_blank">
+            <img
+              src="img/twitter.png"
+              alt="logo twitter"
+              height="100"
+              width="100"
+            />
+          </a>
+
+          <!-- github -->
+
+          <a id="green" href="https://github.com/Carlosxc-dev" target="_blank"
+            ><img src="img/github.png" alt="logo github" height="100" width="100"
+          /></a>
+
+          <!-- instagran -->
+
+          <a
+            href="https://www.instagram.com/carloshenriquecruzxavier/"
+            target="_blank"
+            ><img
+              src="img/instagram.png"
+              alt="logo instagram"
+              height="100"
+              width="100"
+          /></a>
+
+          <!-- linkedin -->
+
+          <a
+            id="green"
+            href="https://www.linkedin.com/in/carlos-henrique-a65a54158/"
+            target="_blank"
+            ><img
+              src="img/linkedin.png"
+              alt="logo linkedin"
+              height="100"
+              width="100"
+          /></a>
+        </div>
+      </nav>
+    </main>
+
     <footer>
-        <div class="copyhight">2022 <p>by</p> carlos.h</div>
+      <h1>by carlos.h 2022</h1>
     </footer>
 
-
     <script src="js/index.js"></script>
-</body>
-
+  </body>
 </html>

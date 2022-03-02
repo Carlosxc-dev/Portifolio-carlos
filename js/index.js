@@ -1,24 +1,23 @@
 let btn = document.querySelector(".menu-header");
 let boxMenu = document.querySelector(".boxMenu");
 let item = document.querySelectorAll(".boxMenu > a > div");
-let eventos = "touchstart click mauseover"
+let a = document.querySelectorAll('.boxMenu > a > div')
 
+//evento thouc mobile
+btn.addEventListener("touch", () => {
 
-
-function multiplosEventos(e){
-    
-    e.split(' ').forEach(event => {
-        
-        btn.addEventListener(event, () => {
-
-            boxMenu.classList.toggle("actived")
-
-            item.forEach(elem => {
-
-                elem.classList.toggle("item")
-            })
-        });
+    boxMenu.classList.toggle("actived")
+    item.forEach(elem => {
+        elem.classList.toggle("item")
     })
-}
+});
 
-multiplosEventos(eventos);
+//evento click desck top
+btn.addEventListener("click", () => {
+    boxMenu.classList.toggle("actived")
+    item.forEach(elem => {
+        elem.classList.toggle("item")
+    })
+})
+
+
