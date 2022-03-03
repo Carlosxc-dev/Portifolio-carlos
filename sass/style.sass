@@ -6,7 +6,7 @@
     align-items: center
 
 header
-    background-color: var.$c2
+    background-color: var.$c1
     width: 100%
     min-height: 10vh
 
@@ -27,7 +27,7 @@ header
     a
         padding: 10px
         font-size: var.$s2
-        color: var.$c1
+        color: var.$c3
 
     a:hover
         color: var.$c5
@@ -37,16 +37,23 @@ main
 
     .about
         width: 100%
-        min-height: 100vh
-        background: black no-repeat url("../img/img-about-media.jpg") center center scroll
+        height: 100vh
+        background: black no-repeat url("../img/img-about-grande.jpg") center center scroll
         background-size: cover
-        @include flex()
+        // filter: blur(3px)
+        
+        .cnt-ab
+            width: 1440px
+            margin: 0 auto
+            min-height: 100vh
+            position: relative
+
 
         .conteiner
             position: absolute
-            top: 300px
-            left: 100px
+            top: 350px
 
+            
         img
             display: none
         h1
@@ -55,12 +62,61 @@ main
         ul
             line-height: 80px
         li
-            font-size: var.$s2
+            font-size: var.$s3
+
+    .skills
+        width: 100%
+        height: 100vh
+        background-color: var.$c2
+
+        .cnt-sk
+            max-width: 1440px
+            margin: 0 auto
+            min-height: 100vh
+            display: grid
+            grid-template-rows: 0.5fr 5fr
+            grid-template-columns: 3fr 1fr
+            grid-template-areas: 'h1 h1' "sk img" "sk img"
+            gap: 10px 40px
+
+        h1
+            font-size: var.$s4
+            grid-area: h1
+            justify-self: center
+            align-self: center
+
+        .conteiner-img
+            align-self: center
+            grid-area: img
+
+        .conteiner
+            grid-area: sk
+            @include flex()
+            width: 100%
+            height: 100%
+            justify-content: space-evenly
+            align-items: center
+            align-content: space-evenly
+
+        .card
+            @include flex()
+            justify-content: center
+            min-width: 200px
+            min-height: 250px
+            border-radius: 50px
+            background-color: var.$c2
+            border: solid 2px var.$c5
 
     .project
         width: 100%
-        min-height: 100vh
-        background-color: var.$c3
+        height: 100vh
+        background: url('../img/img-skills-medio.jpg') no-repeat center center scroll
+        background-size: cover
+
+        .cnt-pj
+            max-width: 1440px
+            margin: 0 auto
+            min-height: 100vh
         @include flex()
         flex-direction: column
         justify-content: space-evenly
@@ -72,61 +128,48 @@ main
             width: 80%
             @include flex()
             justify-content: space-between
-        
+
         .card
             @include flex()
             justify-content: center
             width: 300px
             min-height: 350px
             border-radius: 50px
-            border: solid 2px #fff
-            background-color: var.$c5
-            margin: 30px 0px
-        .card:hover
-            background-color: #00000077
-                 
-    .skills
-        width: 100%
-        min-height: 100vh
-        background: black no-repeat url("../img/img-skills-medio.jpg") center center scroll
-        background-size: cover
-
-        @include flex()
-        flex-direction: column
-
-        h1
-            margin: 40px
-            font-size: var.$s4
-
-        .conteiner
-            @include flex()
-            flex-direction: row
-            justify-content: space-evenly
-            width: 90%
-
-        .card
-            @include flex()
-            justify-content: center
-            width: 300px
-            height: 350px
-            border-radius: 50px
-            background-color: #00000056
             border: solid 2px var.$c5
-            margin-bottom: 50px
+            background-color: #00000054
+            margin: 30px 0px
+
+        a
+            line-height: 60px
+            font-weight: 400
+            font-size: var.$s2
+            font-family: 'roboto'
+
+        .card:hover
+            background-color: var.$c1
+            border: solid 2px var.$c3
+
+        a:hover
+            color: var.$c5
 
     .contact
         width: 100%
         height: 100vh
-        background-color: var.$c3
+        background-color: var.$c2
 
-        @include flex()
-        flex-direction: column
-        justify-content: space-evenly
+        .cnt-ct
+            margin: 0 auto
+            width: 1440px
+            height: 100vh
+            @include flex()
+            flex-direction: column
+            justify-content: space-evenly
+
 
         h1
             margin: 40px
             font-size: var.$s4
-        
+
         .conteiner
             width: 80%
             @include flex()
@@ -136,17 +179,17 @@ main
             border-radius: 50%
             @include flex()
             justify-content: center
-            border: solid 3px var.$c3
-            
+            border: solid 3px var.$c2
+
         a:hover
-            border-color: var.$c1
-            
+            border-color: var.$c5
+
 footer
     min-height: 50vh
-    background-color: var.$c2
+    background-color: var.$c1
     @include flex()
     justify-content: center
 
     h1
-        font-size: var.$s2
-        color: var.$c1
+        font-size: var.$s3
+        color: var.$c3

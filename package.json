@@ -1,0 +1,23 @@
+{
+  "name": "portifolio-carlos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Carlosxc-dev/Portifolio-carlos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Carlosxc-dev/Portifolio-carlos/issues"
+  },
+  "homepage": "https://github.com/Carlosxc-dev/Portifolio-carlos#readme",
+  "dependencies": {
+    "sass": "^1.49.9"
+  }
+}
