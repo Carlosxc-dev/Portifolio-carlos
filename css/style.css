@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+body {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -43,11 +47,23 @@ header a:hover {
 main {
   overflow: hidden;
 }
-main .about {
+main .intro {
   width: 100%;
   height: 100vh;
   background: black no-repeat url("../img/img-about-grande.jpg") center center scroll;
   background-size: cover;
+}
+main .intro h1 {
+  width: 1440px;
+  margin: 0 auto;
+  font-size: 4rem;
+  margin-bottom: 40px;
+  background-color: #181818;
+}
+main .about {
+  width: 100%;
+  height: 100vh;
+  background-color: #5A595B;
 }
 main .about .cnt-ab {
   width: 1440px;
@@ -62,10 +78,6 @@ main .about .conteiner {
 main .about img {
   display: none;
 }
-main .about h1 {
-  font-size: 4rem;
-  margin-bottom: 40px;
-}
 main .about ul {
   line-height: 80px;
 }
@@ -76,6 +88,7 @@ main .skills {
   width: 100%;
   height: 100vh;
   background-color: #1E1E1E;
+  padding: 30px 0px;
 }
 main .skills .cnt-sk {
   max-width: 1440px;
@@ -124,16 +137,17 @@ main .project {
   height: 100vh;
   background: url("../img/img-skills-medio.jpg") no-repeat center center scroll;
   background-size: cover;
+  padding: 30px 0px;
+}
+main .project .cnt-pj {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-main .project .cnt-pj {
   max-width: 1440px;
   margin: 0 auto;
   min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 main .project h1 {
   font-size: 4rem;
@@ -179,33 +193,104 @@ main .contact .cnt-ct {
   margin: 0 auto;
   width: 1440px;
   height: 100vh;
+  display: grid;
+  grid-template-rows: 200px 1fr;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "tl tl" "img fm";
+  grid-gap: 50px;
+  justify-items: center;
+  align-items: start;
+}
+main .contact h1 {
+  grid-area: tl;
+  align-self: center;
+  margin: 40px;
+  font-size: 4rem;
+}
+main .contact img {
+  grid-area: img;
+}
+main .contact form {
+  grid-area: fm;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 100px 100px 100px 100px;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-areas: "name email" "obj obj" "msg msg" "btn btn";
+  grid-gap: 50px;
+}
+main .contact form .name {
+  grid-area: name;
+  border-radius: 50px;
+  background-color: #5A595B;
+  color: #181818;
+  font-size: 2rem;
+}
+main .contact form .email {
+  grid-area: email;
+  border-radius: 50px;
+  background-color: #5A595B;
+  color: #181818;
+  font-size: 2rem;
+}
+main .contact form .obj {
+  grid-area: obj;
+  border-radius: 50px;
+  background-color: #5A595B;
+  color: #181818;
+  font-size: 2rem;
+}
+main .contact form .mgs {
+  grid-area: msg;
+  border-radius: 50px;
+  background-color: #5A595B;
+  color: #181818;
+  font-size: 2rem;
+}
+main .contact form .btn {
+  grid-area: btn;
+  border-radius: 50px;
+  background-color: #1E1E1E;
+  width: 200px;
+  height: 100px;
+  color: #FFFFFC;
+  font-size: 2rem;
+  justify-self: end;
+  align-self: center;
+  border: solid 2px #FE0000;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+main .contact form .btn:hover {
+  background-color: #FE0000;
+  border: solid 2px #FFFFFC;
+}
+
+.link-vertical {
+  position: fixed;
+  left: 20px;
+  bottom: 50px;
+  max-width: 100px;
+  min-height: 300px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   flex-direction: column;
-  justify-content: space-evenly;
-}
-main .contact h1 {
-  margin: 40px;
-  font-size: 4rem;
-}
-main .contact .conteiner {
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-evenly;
+  list-style: none;
+  background-color: #0000005b;
+  border-radius: 30px;
 }
-main .contact a {
+.link-vertical a {
+  padding: 20px;
+}
+.link-vertical img {
+  border: 2px solid #1E1E1E;
   border-radius: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  border: solid 3px #1E1E1E;
 }
-main .contact a:hover {
-  border-color: #FE0000;
+.link-vertical img:hover {
+  border: 2px solid #FE0000;
 }
 
 footer {
