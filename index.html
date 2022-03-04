@@ -10,34 +10,46 @@
   </head>
 
   <body>
-    <header>
+    <header id="home">
       <div class="conteiner-header">
         <h1>Portifolio</h1>
 
-        <nav class="menu">
+        <!-- <nav class="menu">
+          <a href="#home"> home </a>
           <a href="#about"> about </a>
           <a href="#skills"> skills </a>
           <a href="#project"> project </a>
           <a href="#contact"> contact </a>
-        </nav>
+        </nav> -->
       </div>
     </header>
 
     <main>
-      <sectio class="intro">
-        <h1>Olá, sou Carlos Henrique</h1>
-      </section>
+      <div class="scroll">
+        <nav class="menu-sc">
+          <a href="#home"> home </a>
+          <a href="#about"> about </a>
+          <a href="#skills"> skills </a>
+          <a href="#project"> project </a>
+          <a href="#contact"> contact </a>
+      </div>
       
+      <section class="home">
+        <div class="conteiner">
+          <h1>Olá, sou Carlos Henrique</h1>
+        </div>
+      </section>
+
       <section class="about" id="about">
-        <div class="cnt-ab">
-          <img src="img/img-about.png" alt="autor foto" />
-          <div class="conteiner">
-            <ul>
-              <li>Iniciante no mundo front end</li>
-              <li>Moro em Minas Gerais - Brasil</li>
-              <li>Graduando em Engenharia da computação</li>
-            </ul>
-          </div>
+
+        <div class="conteiner-ab">
+          
+          <ul>
+            <li>Iniciante no mundo Frontend</li>
+            <li>Granduando em engenharia da computação - UNIFEI</li>
+            <li>Moro em Minas Gerais - Brasil</li>
+            <li>Tenho 23 anos</li>
+          </ul>
         </div>
       </section>
 
@@ -45,12 +57,7 @@
         <div class="cnt-sk">
           <h1>habilidades</h1>
           <div class="conteiner-img">
-            <img
-              src="img/Profile data-bro.svg"
-              alt="svg"
-              height="600"
-              width="600"
-            />
+          
           </div>
           <div class="conteiner">
             <div class="card">
@@ -174,29 +181,16 @@
           />
 
           <div class="cnt-fm">
-            <form action="post">
-              <input
-                class="name"
-                type="text"
-                name="name"
-                placeholder="   name"
-              />
-              <input class="email" type="email" placeholder="   email" />
-              <textarea
-                class="obj"
-                name="object"
-                id="ob"
-                cols="50"
-                rows="10"
-                placeholder="   subject"
-              ></textarea>
+            <form method="POST" action="./js/form.js">
+              <input class="name" type="text" placeholder="name" />
+              <input class="email" type="email" placeholder="email" />
+              <textarea class="obj" placeholder="subject"></textarea>
               <textarea
                 class="msg"
-                name="message"
                 id="msg"
-                cols="30"
-                rows="10"
-                placeholder="   message"
+                cols="50"
+                rows="50"
+                placeholder="description..."
               ></textarea>
               <button class="btn">enviar</button>
             </form>
@@ -208,7 +202,7 @@
     <nav class="link-vertical">
       <!-- twitter -->
       <a href="https://twitter.com/home" target="_blank">
-        <img src="img/twitter.png" alt="logo twitter" height="60" width="60" />
+        <img src="img/twitter.png" alt="logo twitter" height="50" width="50" />
       </a>
       <!-- instagran -->
       <a
@@ -217,19 +211,19 @@
         ><img
           src="img/instagram.png"
           alt="logo instagram"
-          height="60"
-          width="60"
+          height="50"
+          width="50"
       /></a>
       <!-- github -->
       <a id="green" href="https://github.com/Carlosxc-dev" target="_blank"
-        ><img src="img/github.png" alt="logo github" height="60" width="60"
+        ><img src="img/github.png" alt="logo github" height="50" width="50"
       /></a>
       <!-- linkedin -->
       <a
         id="green"
         href="https://www.linkedin.com/in/carlos-henrique-a65a54158/"
         target="_blank"
-        ><img src="img/linkedin.png" alt="logo linkedin" height="60" width="60"
+        ><img src="img/linkedin.png" alt="logo linkedin" height="50" width="50"
       /></a>
     </nav>
 
@@ -238,13 +232,15 @@
         <img
           src="img/8725637_copyright_icon.svg"
           alt="copyRighy"
-          width="50"
-          height="50"
+          width="30"
+          height="30"
         />
         2022 Carlos
       </h1>
     </footer>
 
     <script src="js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/linkSuave.js"></script>
   </body>
 </html>

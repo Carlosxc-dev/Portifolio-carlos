@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
-body {
-  scroll-behavior: smooth;
-}
-
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   color: #FFFFFC;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 header {
@@ -27,7 +28,7 @@ header .conteiner-header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 90%;
 }
 header .menu {
@@ -46,48 +47,93 @@ header a:hover {
 
 main {
   overflow: hidden;
+  min-height: auto;
 }
-main .intro {
+main .scroll {
+  width: 100px;
+  height: auto;
+}
+main .scroll .menu-sc {
+  position: fixed;
+  right: 20px;
+  bottom: 250px;
+  max-width: 90px;
+  min-height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #1E1E1E;
+  border-radius: 30px;
+}
+main .scroll .menu-sc a {
+  padding: 20px;
+  margin: 5px 0px;
+  transform: rotate(90deg);
+  font-size: 20px;
+}
+main .scroll .menu-sc a:hover {
+  color: #FE0000;
+}
+main .home {
   width: 100%;
   height: 100vh;
   background: black no-repeat url("../img/img-about-grande.jpg") center center scroll;
   background-size: cover;
-}
-main .intro h1 {
-  width: 1440px;
-  margin: 0 auto;
-  font-size: 4rem;
-  margin-bottom: 40px;
-  background-color: #181818;
-}
-main .about {
   width: 100%;
   height: 100vh;
   background-color: #5A595B;
 }
-main .about .cnt-ab {
-  width: 1440px;
+main .home .conteiner {
+  max-width: 1440px;
   margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+main .home h1 {
+  font-size: 5rem;
+}
+main .about {
+  background-color: #181818;
+  width: 100%;
   min-height: 100vh;
-  position: relative;
+  background: url("../img/texture.jpg") center center no-repeat scroll;
+  background-size: cover;
 }
-main .about .conteiner {
-  position: absolute;
-  top: 350px;
+main .about .conteiner-ab {
+  width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "tl tl" "tx tx";
+  justify-items: center;
+  align-items: center;
 }
-main .about img {
-  display: none;
-}
-main .about ul {
-  line-height: 80px;
-}
-main .about li {
+main .about .conteiner-ab ul {
+  width: auto;
+  height: auto;
   font-size: 3rem;
+  align-self: start;
+  line-height: 80px;
+  grid-area: tx;
+  list-style-position: inside;
+  background-color: #0000003a;
+  border-radius: 50px;
+  padding: 40px;
+  list-style-type: circle;
 }
 main .skills {
   width: 100%;
   height: 100vh;
-  background-color: #1E1E1E;
+  background: url("../img/img-skills-medio.jpg") no-repeat center center scroll;
+  background-size: cover;
   padding: 30px 0px;
 }
 main .skills .cnt-sk {
@@ -96,7 +142,7 @@ main .skills .cnt-sk {
   min-height: 100vh;
   display: grid;
   grid-template-rows: 0.5fr 5fr;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas: "h1 h1" "sk img" "sk img";
   gap: 10px 40px;
 }
@@ -135,7 +181,7 @@ main .skills .card {
 main .project {
   width: 100%;
   height: 100vh;
-  background: url("../img/img-skills-medio.jpg") no-repeat center center scroll;
+  background: url("../img/project.jpg") no-repeat center center scroll;
   background-size: cover;
   padding: 30px 0px;
 }
@@ -168,7 +214,7 @@ main .project .card {
   min-height: 350px;
   border-radius: 50px;
   border: solid 2px #FE0000;
-  background-color: #00000054;
+  background-color: #000000a2;
   margin: 30px 0px;
 }
 main .project a {
@@ -187,14 +233,15 @@ main .project a:hover {
 main .contact {
   width: 100%;
   height: 100vh;
-  background-color: #1E1E1E;
+  background: url("../img/project2.jpg") no-repeat center center scroll;
+  background-size: cover;
 }
 main .contact .cnt-ct {
   margin: 0 auto;
   width: 1440px;
   height: 100vh;
   display: grid;
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: 150px 1fr;
   grid-template-columns: 1fr 2fr;
   grid-template-areas: "tl tl" "img fm";
   grid-gap: 50px;
@@ -214,8 +261,8 @@ main .contact form {
   grid-area: fm;
   width: 100%;
   display: grid;
-  grid-template-rows: 100px 100px 100px 100px;
-  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 100px 100px 10% 100px;
+  grid-template-columns: 40% 60%;
   grid-template-areas: "name email" "obj obj" "msg msg" "btn btn";
   grid-gap: 50px;
 }
@@ -223,29 +270,39 @@ main .contact form .name {
   grid-area: name;
   border-radius: 50px;
   background-color: #5A595B;
-  color: #181818;
+  color: #FFFFFC;
   font-size: 2rem;
+  padding: 5px 20px;
+  outline: 2px solid #FFFFFC;
 }
 main .contact form .email {
   grid-area: email;
   border-radius: 50px;
   background-color: #5A595B;
-  color: #181818;
+  color: #FFFFFC;
   font-size: 2rem;
+  padding: 5px 20px;
+  outline: 2px solid #FFFFFC;
 }
 main .contact form .obj {
   grid-area: obj;
   border-radius: 50px;
   background-color: #5A595B;
-  color: #181818;
+  color: #FFFFFC;
   font-size: 2rem;
+  padding: 5px 20px;
+  outline: 2px solid #FFFFFC;
+  padding-top: 25px;
 }
-main .contact form .mgs {
+main .contact form #msg {
   grid-area: msg;
   border-radius: 50px;
   background-color: #5A595B;
-  color: #181818;
+  color: #FFFFFC;
   font-size: 2rem;
+  padding: 5px 20px;
+  outline: 2px solid #FFFFFC;
+  padding-top: 25px;
 }
 main .contact form .btn {
   grid-area: btn;
@@ -260,18 +317,20 @@ main .contact form .btn {
   border: solid 2px #FE0000;
   cursor: pointer;
   transition-duration: 0.5s;
+  font-weight: 700;
 }
 main .contact form .btn:hover {
   background-color: #FE0000;
   border: solid 2px #FFFFFC;
+  color: #181818;
 }
 
 .link-vertical {
   position: fixed;
   left: 20px;
-  bottom: 50px;
-  max-width: 100px;
-  min-height: 300px;
+  bottom: 250px;
+  max-width: 90px;
+  min-height: 500px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -279,22 +338,22 @@ main .contact form .btn:hover {
   justify-content: space-between;
   align-items: center;
   list-style: none;
-  background-color: #0000005b;
+  background-color: #1E1E1E;
   border-radius: 30px;
 }
 .link-vertical a {
-  padding: 20px;
+  padding: 10px;
 }
 .link-vertical img {
   border: 2px solid #1E1E1E;
   border-radius: 50%;
 }
 .link-vertical img:hover {
-  border: 2px solid #FE0000;
+  border: 2px solid #FFFFFC;
 }
 
 footer {
-  min-height: 50vh;
+  min-height: 10vh;
   background-color: #181818;
   display: flex;
   flex-wrap: wrap;
@@ -302,7 +361,7 @@ footer {
   justify-content: center;
 }
 footer h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #FFFFFC;
 }
 
