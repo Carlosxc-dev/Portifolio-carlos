@@ -134,11 +134,14 @@ main .skills .conteiner-skills .conteiner-cards .card {
   align-items: center;
   margin: 10px;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   padding: 10px;
   border-radius: 30px;
   background-color: #1E1E1E;
   border: solid 2px #FE0000;
+}
+main .skills .conteiner-skills .conteiner-cards .card p {
+  color: #5A595B;
 }
 main .project {
   width: 100%;
