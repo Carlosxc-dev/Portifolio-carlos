@@ -1,5 +1,4 @@
 @use 'var'
-@use 'mediaQuery'
 
 @mixin flex()
     display: flex
@@ -47,6 +46,9 @@ header
 
             a:hover
                 color: var.$c5
+
+        button
+            display: none
 
 main
     overflow: hidden
@@ -272,3 +274,101 @@ footer
     h2
         font-size: var.$s2
         color: var.$c3
+
+//responsive
+
+@media only screen and (max-width: 425px)
+
+    .link-vertical
+        flex-direction: row
+        width: 250px
+        height: 50px
+        left: 50%
+        bottom: 20px
+        transform: translateX(-50%)
+
+    header
+        .conteiner-header
+            .menu
+                display: none
+
+            button
+                display: block
+                background-color: var.$c1
+                border: 0px
+    main
+        .home
+            .conteiner-home
+                h1
+                    text-align: center
+                    width: 50%
+        .about
+            .conteiner-about
+                justify-content: center
+
+                h2
+                    font-size: var.$s2
+                ul
+                    li
+                        line-height: 40px
+                        font-size: var.$s1
+        .skills
+            height: auto
+            background-size: contain
+            background-repeat: repeat
+
+            .conteiner-skills
+                flex-wrap: nowrap
+                justify-content: space-evenly
+                align-items: center
+
+                h2
+                    font-size: var.$s2
+
+                .conteiner-cards
+                    flex-direction: column
+                    flex-wrap: nowrap
+                    justify-content: flex-start
+                    align-items: center           
+        .project
+            height: auto
+            .conteiner-projects
+                justify-content: space-evenly
+                h2
+                    font-size: var.$s2
+                .conteiner-cards
+                    flex-direction: column
+                    justify-content: flex-start
+                    align-items: center       
+
+                    .card
+                        margin: 10px
+                          
+        .contact
+            .conteiner-contact
+                display: flex
+                flex-direction: column
+                justify-content: space-evenly
+
+                h2
+                    font-size: var.$s2
+                    text-align: center
+                    margin: 0
+                img 
+                    display: none
+
+                form
+                    flex-wrap: nowrap
+                    justify-content: center
+                    align-items: center
+                    height: auto
+                    width: 80%
+
+                    .btn
+                        align-self: center
+                        font-size: var.$s1
+                        height: 50px
+
+                    .name, .email, .obj, .msg, .btn
+                        border-radius: 10px
+

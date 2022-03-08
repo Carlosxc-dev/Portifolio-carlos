@@ -43,6 +43,9 @@ header .conteiner-header .menu a {
 header .conteiner-header .menu a:hover {
   color: #FE0000;
 }
+header .conteiner-header button {
+  display: none;
+}
 
 main {
   overflow: hidden;
@@ -330,6 +333,105 @@ footer {
 footer h2 {
   font-size: 2rem;
   color: #FFFFFC;
+}
+
+@media only screen and (max-width: 425px) {
+  .link-vertical {
+    flex-direction: row;
+    width: 250px;
+    height: 50px;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+  }
+
+  header .conteiner-header .menu {
+    display: none;
+  }
+  header .conteiner-header button {
+    display: block;
+    background-color: #181818;
+    border: 0px;
+  }
+
+  main .home .conteiner-home h1 {
+    text-align: center;
+    width: 50%;
+  }
+  main .about .conteiner-about {
+    justify-content: center;
+  }
+  main .about .conteiner-about h2 {
+    font-size: 2rem;
+  }
+  main .about .conteiner-about ul li {
+    line-height: 40px;
+    font-size: 1rem;
+  }
+  main .skills {
+    height: auto;
+    background-size: contain;
+    background-repeat: repeat;
+  }
+  main .skills .conteiner-skills {
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  main .skills .conteiner-skills h2 {
+    font-size: 2rem;
+  }
+  main .skills .conteiner-skills .conteiner-cards {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  main .project {
+    height: auto;
+  }
+  main .project .conteiner-projects {
+    justify-content: space-evenly;
+  }
+  main .project .conteiner-projects h2 {
+    font-size: 2rem;
+  }
+  main .project .conteiner-projects .conteiner-cards {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  main .project .conteiner-projects .conteiner-cards .card {
+    margin: 10px;
+  }
+  main .contact .conteiner-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  main .contact .conteiner-contact h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+  }
+  main .contact .conteiner-contact img {
+    display: none;
+  }
+  main .contact .conteiner-contact form {
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 80%;
+  }
+  main .contact .conteiner-contact form .btn {
+    align-self: center;
+    font-size: 1rem;
+    height: 50px;
+  }
+  main .contact .conteiner-contact form .name, main .contact .conteiner-contact form .email, main .contact .conteiner-contact form .obj, main .contact .conteiner-contact form .msg, main .contact .conteiner-contact form .btn {
+    border-radius: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
