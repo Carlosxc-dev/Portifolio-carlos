@@ -382,6 +382,10 @@ footer h2 {
     justify-content: space-between;
     align-items: center;
   }
+  header .conteiner-header .conteiner-toggle.on .menu a {
+    font-family: "Cookie", cursive;
+    font-size: 2rem;
+  }
 
   main .home .conteiner-home h2 {
     text-align: center;
