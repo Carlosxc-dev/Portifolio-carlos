@@ -3,7 +3,7 @@ const conteinerToggle = document.querySelector('.conteiner-toggle')
 const btn = conteinerToggle.querySelector('button')
 const links = conteinerToggle.querySelectorAll('.menu > a')
 
-btn.addEventListener('click', ()=> {
+btn.addEventListener('touch', ()=> {
 
     document.body.style.overflow = show ? 'hidden':'initial'
     conteinerToggle.classList.toggle('on', show)
@@ -11,11 +11,10 @@ btn.addEventListener('click', ()=> {
 
 })
 
-console.log(links);
 
 links.forEach(element => {
 
-    element.addEventListener('click', ()=>{
+    element.addEventListener('touch', ()=>{
 
         conteinerToggle.classList.remove('on')
         document.body.style.overflow ='initial'
