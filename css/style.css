@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Passion+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +18,7 @@ body {
 header {
   background-color: #181818;
   width: 100%;
+  height: 10vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -67,8 +72,9 @@ main .home .conteiner-home {
   justify-content: center;
   align-items: center;
 }
-main .home .conteiner-home h1 {
-  font-size: 3rem;
+main .home .conteiner-home h2 {
+  font-size: 4rem;
+  font-family: "Bebas Neue", cursive;
 }
 main .about {
   width: 100%;
@@ -89,6 +95,7 @@ main .about .conteiner-about {
 }
 main .about .conteiner-about h2 {
   font-size: 3rem;
+  font-family: "Cookie", cursive;
 }
 main .about .conteiner-about ul {
   max-width: 100%;
@@ -119,8 +126,9 @@ main .skills .conteiner-skills {
   flex-direction: column;
   justify-content: space-evenly;
 }
-main .skills .conteiner-skills h1 {
+main .skills .conteiner-skills h2 {
   font-size: 3rem;
+  font-family: "Cookie", cursive;
 }
 main .skills .conteiner-skills .conteiner-cards {
   display: flex;
@@ -296,22 +304,22 @@ main .contact .conteiner-contact form .btn:hover {
 
 .link-vertical {
   position: fixed;
-  left: 20px;
+  right: 20px;
   bottom: 50px;
-  width: 50px;
-  height: 250px;
+  width: auto;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   list-style: none;
   background-color: #1E1E1E;
   border-radius: 30px;
 }
 .link-vertical a {
-  padding: 5px;
+  padding: 3px 2px;
 }
 .link-vertical a img {
   border: 2px solid #1E1E1E;
@@ -336,8 +344,6 @@ footer h2 {
 
 @media only screen and (max-width: 425px) {
   .link-vertical {
-    width: 40px;
-    height: 180px;
     right: 5px;
     bottom: 10px;
   }
@@ -377,15 +383,15 @@ footer h2 {
     align-items: center;
   }
 
-  main .home .conteiner-home h1 {
+  main .home .conteiner-home h2 {
     text-align: center;
     width: 50%;
   }
   main .about .conteiner-about {
-    justify-content: center;
+    justify-content: space-evenly;
   }
   main .about .conteiner-about h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   main .about .conteiner-about ul li {
     line-height: 40px;
@@ -402,7 +408,8 @@ footer h2 {
     align-items: center;
   }
   main .skills .conteiner-skills h2 {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin: 10px 0px;
   }
   main .skills .conteiner-skills .conteiner-cards {
     flex-direction: column;
@@ -417,7 +424,9 @@ footer h2 {
     justify-content: space-evenly;
   }
   main .project .conteiner-projects h2 {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-family: "Cookie", cursive;
+    margin: 10px 0px;
   }
   main .project .conteiner-projects .conteiner-cards {
     flex-direction: column;
@@ -433,7 +442,8 @@ footer h2 {
     justify-content: space-evenly;
   }
   main .contact .conteiner-contact h2 {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-family: "Cookie", cursive;
     text-align: center;
     margin: 0;
   }
@@ -454,6 +464,10 @@ footer h2 {
   }
   main .contact .conteiner-contact form .name, main .contact .conteiner-contact form .email, main .contact .conteiner-contact form .obj, main .contact .conteiner-contact form .msg, main .contact .conteiner-contact form .btn {
     border-radius: 10px;
+  }
+
+  footer h2 {
+    font-size: 1rem;
   }
 }
 
