@@ -338,13 +338,10 @@ footer h2 {
   .link-vertical {
     width: 40px;
     height: 180px;
-    left: 5px;
+    right: 5px;
     bottom: 10px;
   }
 
-  header {
-    height: auto;
-  }
   header .conteiner-header .conteiner-toggle button {
     display: block;
     background-color: #181818;
