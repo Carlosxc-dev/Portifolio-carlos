@@ -14,7 +14,6 @@ body {
 header {
   background-color: #181818;
   width: 100%;
-  min-height: 10vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -345,13 +344,42 @@ footer h2 {
     transform: translateX(-50%);
   }
 
-  header .conteiner-header .menu {
-    display: none;
+  header {
+    height: auto;
   }
-  header .conteiner-header button {
+  header .conteiner-header .conteiner-toggle button {
     display: block;
     background-color: #181818;
     border: 0px;
+  }
+  header .conteiner-header .conteiner-toggle .menu {
+    display: none;
+  }
+  header .conteiner-header .conteiner-toggle.on {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    background-color: #181818;
+    color: #FFFFFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.3s;
+  }
+  header .conteiner-header .conteiner-toggle.on button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  header .conteiner-header .conteiner-toggle.on .menu {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 
   main .home .conteiner-home h1 {

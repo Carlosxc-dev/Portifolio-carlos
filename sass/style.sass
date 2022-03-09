@@ -24,7 +24,6 @@
 header
     background-color: var.$c1
     width: 100%
-    min-height: 10vh
     @include flex()
     justify-content: center
 
@@ -276,7 +275,6 @@ footer
         color: var.$c3
 
 //responsive
-
 @media only screen and (max-width: 425px)
 
     .link-vertical
@@ -288,14 +286,45 @@ footer
         transform: translateX(-50%)
 
     header
-        .conteiner-header
-            .menu
-                display: none
+        height: auto
 
-            button
+        .conteiner-header
+
+            .conteiner-toggle button
                 display: block
                 background-color: var.$c1
                 border: 0px
+
+            .conteiner-toggle .menu
+                display: none
+
+            .conteiner-toggle.on
+                position: absolute
+                left: 0
+                top: 0
+                z-index: 10
+                height: 100vh
+                width: 100vw
+                background-color: var.$c1
+                color: var.$c3
+                display: flex
+                justify-content: center
+                align-items: center
+
+                transition-duration: 0.3s
+
+                button
+                    position: absolute
+                    right: 10px
+                    top: 10px
+
+                .menu
+                    display: block
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    align-items: center
+
     main
         .home
             .conteiner-home
@@ -329,7 +358,7 @@ footer
                     flex-direction: column
                     flex-wrap: nowrap
                     justify-content: flex-start
-                    align-items: center           
+                    align-items: center
         .project
             height: auto
             .conteiner-projects
@@ -339,11 +368,10 @@ footer
                 .conteiner-cards
                     flex-direction: column
                     justify-content: flex-start
-                    align-items: center       
+                    align-items: center
 
                     .card
                         margin: 10px
-                          
         .contact
             .conteiner-contact
                 display: flex
@@ -354,7 +382,7 @@ footer
                     font-size: var.$s2
                     text-align: center
                     margin: 0
-                img 
+                img
                     display: none
 
                 form
@@ -371,4 +399,3 @@ footer
 
                     .name, .email, .obj, .msg, .btn
                         border-radius: 10px
-

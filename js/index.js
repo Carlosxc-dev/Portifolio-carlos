@@ -1,23 +1,25 @@
-let btn = document.querySelector(".menu-header");
-let boxMenu = document.querySelector(".boxMenu");
-let item = document.querySelectorAll(".boxMenu > a > div");
-let a = document.querySelectorAll('.boxMenu > a > div')
+let show = true
+const conteinerToggle = document.querySelector('.conteiner-toggle')
+const btn = conteinerToggle.querySelector('button')
+const links = conteinerToggle.querySelectorAll('.menu > a')
 
-//evento thouc mobile
-btn.addEventListener("touch", () => {
+btn.addEventListener('click', ()=> {
 
-    boxMenu.classList.toggle("actived")
-    item.forEach(elem => {
-        elem.classList.toggle("item")
-    })
-});
+    document.body.style.overflow = show ? 'hidden':'initial'
+    conteinerToggle.classList.toggle('on', show)
+    show = !show
 
-//evento click desck top
-btn.addEventListener("click", () => {
-    boxMenu.classList.toggle("actived")
-    item.forEach(elem => {
-        elem.classList.toggle("item")
-    })
 })
 
+console.log(links);
 
+links.forEach(element => {
+
+    element.addEventListener('click', ()=>{
+
+        conteinerToggle.classList.remove('on')
+        document.body.style.overflow ='initial'
+
+    })
+    
+});
