@@ -14,7 +14,7 @@ btn.addEventListener('touchstart', ()=> {
 
 links.forEach(element => {
 
-    element.addEventListener('touchstart', ()=>{
+    element.addEventListener('touchend', ()=>{
 
         conteinerToggle.classList.remove('on')
         document.body.style.overflow ='initial'

@@ -74,7 +74,7 @@ main .home .conteiner-home {
 }
 main .home .conteiner-home h2 {
   font-size: 4rem;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue", "Cookie", cursive;
 }
 main .about {
   width: 100%;
@@ -100,7 +100,7 @@ main .about .conteiner-about h2 {
 main .about .conteiner-about ul {
   max-width: 100%;
   height: auto;
-  font-size: 2rem;
+  font-size: 1rem;
   line-height: 80px;
   list-style-position: inside;
   background-color: #00000060;
@@ -286,10 +286,11 @@ main .contact .conteiner-contact form .msg {
 main .contact .conteiner-contact form .btn {
   border-radius: 50px;
   background-color: #1E1E1E;
-  width: 150px;
-  height: 60px;
+  width: auto;
+  height: auto;
+  padding: 8px;
   color: #FFFFFC;
-  font-size: 2rem;
+  font-size: 1rem;
   border: solid 2px #FE0000;
   cursor: pointer;
   transition-duration: 0.5s;
