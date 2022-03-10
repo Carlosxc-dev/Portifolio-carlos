@@ -17,12 +17,15 @@ body {
 }
 
 header {
-  background-color: #181818;
+  background-color: #0000007a;
   width: 100%;
   height: 10vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
   justify-content: center;
 }
 header .conteiner-header {
@@ -59,7 +62,7 @@ main {
 main .home {
   width: 100%;
   height: 100vh;
-  background: black no-repeat url("../img/banner.jpg") center center scroll;
+  background: black no-repeat url("../img/banner.jpg") center center fixed;
   background-size: cover;
 }
 main .home .conteiner-home {
@@ -115,6 +118,9 @@ main .about .conteiner-about ul {
   background-color: #00000060;
   padding: 40px;
   list-style-type: circle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 main .skills {
   width: 100%;
@@ -148,6 +154,7 @@ main .skills .conteiner-skills .conteiner-cards {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   align-content: center;
   width: 70%;
   height: 100%;
@@ -203,6 +210,7 @@ main .project .conteiner-projects .conteiner-cards {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   align-content: center;
   background-color: #00000060;
 }
@@ -381,7 +389,28 @@ footer h2 {
   color: #FFFFFC;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 755px) {
+  main .about .conteiner-about ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main .skills {
+    height: 120vh;
+  }
+
+  main .skills .conteiner-skills .conteiner-cards {
+    align-content: start;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  main .project .conteiner-projects .conteiner-cards {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 550px) {
   .link-vertical {
     right: 5px;
     bottom: 10px;
@@ -389,7 +418,7 @@ footer h2 {
 
   header .conteiner-header .conteiner-toggle button {
     display: block;
-    background-color: #181818;
+    background-color: #00000000;
     border: 0px;
   }
   header .conteiner-header .conteiner-toggle .menu {
@@ -427,17 +456,23 @@ footer h2 {
   }
 
   main .home {
-    background-image: url("../img/banner-mobile.jpg");
+    background-image: url("../img/iPhone 13 Pro Max - 1.jpg");
   }
   main .home .conteiner-home h2 {
     text-align: center;
     width: 50%;
   }
   main .about .conteiner-about {
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   main .about .conteiner-about h2 {
     font-size: 3rem;
+    width: 100%;
+    height: 50px;
+  }
+  main .about .conteiner-about ul {
+    width: 100%;
   }
   main .about .conteiner-about ul li {
     line-height: 40px;
@@ -452,46 +487,57 @@ footer h2 {
     flex-wrap: nowrap;
     justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
   }
   main .skills .conteiner-skills h2 {
     font-size: 3rem;
-    margin: 10px 0px;
+    width: 100%;
+    height: 50px;
   }
   main .skills .conteiner-skills .conteiner-cards {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
+    width: 100%;
   }
   main .project {
     height: auto;
   }
   main .project .conteiner-projects {
     justify-content: space-evenly;
+    flex-direction: column;
   }
   main .project .conteiner-projects h2 {
     font-size: 3rem;
     font-family: "Cookie", cursive;
-    margin: 10px 0px;
+    width: 100%;
+    height: 55px;
   }
   main .project .conteiner-projects .conteiner-cards {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    width: 100%;
   }
   main .project .conteiner-projects .conteiner-cards .card {
     margin: 10px;
   }
+  main .contact {
+    height: auto;
+  }
   main .contact .conteiner-contact {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
   }
   main .contact .conteiner-contact h2 {
     font-size: 3rem;
     font-family: "Cookie", cursive;
     text-align: center;
     margin: 0;
+    width: 100%;
+    height: 50px;
   }
   main .contact .conteiner-contact img {
     display: none;
@@ -501,7 +547,8 @@ footer h2 {
     justify-content: center;
     align-items: center;
     height: auto;
-    width: 80%;
+    width: 100%;
+    padding: 20px;
   }
   main .contact .conteiner-contact form .btn {
     align-self: center;
