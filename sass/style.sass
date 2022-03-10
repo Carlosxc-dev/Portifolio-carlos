@@ -6,13 +6,13 @@
     align-items: center
 
 @mixin config-iten-form
-    border-radius: 50px
+    border-radius: 25px
     background-color: var.$c4
     color: var.$c3
     font-size: var.$s1
     padding: 5px 20px
     height: 40px
-    width: 90%
+    width: 80%
     margin-bottom: 10px
 
 @mixin conteiner-geral-main()
@@ -57,7 +57,7 @@ main
     .home
         width: 100%
         height: 100vh
-        background: black no-repeat url("../img/img-about-grande.jpg") center center scroll
+        background: black no-repeat url("../img/banner.jpg") center center scroll
         background-size: cover
 
         .conteiner-home
@@ -73,56 +73,68 @@ main
 
     .about
         width: 100%
-        height: 100vh
-        background: url('../img/texture.jpg') center center no-repeat scroll
-        background-size: cover
+        height: 70vh
+        background-color: var.$c1
 
         .conteiner-about
             @include conteiner-geral-main()
 
             @include flex()
-            flex-direction: column
+            flex-direction: row
             justify-content: space-evenly
+            flex-wrap: nowrap
+            margin-bottom: 1px
 
             h2
                 font-size: var.$s3
                 font-family: var.$title
+                width: 30%
+                height: 100%
+                background-color: var.$c5
+                @include flex()
+                justify-content: center
 
             ul
-                max-width: 100%
-                height: auto
+                width: 70%
+                height: 100%
                 font-size: var.$s1
                 line-height: 80px
                 list-style-position: inside
                 background-color: #00000060
-                border-radius: 50px
                 padding: 40px
                 list-style-type: circle
 
     .skills
         width: 100%
         height: 100vh
-        background: url('../img/img-skills-medio.jpg') no-repeat center center scroll
-        background-size: cover
+        background-color: var.$c1
 
         .conteiner-skills
             @include conteiner-geral-main()
-            min-height: 100%
+            min-height: 70vh
             @include flex()
-            flex-direction: column
-            justify-content: space-evenly
+            flex-direction: row-reverse
+            justify-content: flex-start
 
             h2
                 font-size: var.$s3
                 font-family: var.$title
+                width: 30%
+                height: 100%
+                background-color: var.$c5
+                @include flex()
+                justify-content: center
 
             .conteiner-cards
                 @include flex()
-                width: 80%
+                align-content: center
+                width: 70%
+                height: 100%
+                background-color: #00000060
 
                 .card
                     width: 150px
-                    height: 200px
+                    min-height: 250px
                     @include flex()
                     margin: 10px
                     flex-direction: column
@@ -130,7 +142,8 @@ main
                     padding: 10px
                     border-radius: 30px
                     background-color: var.$c2
-                    border: solid 2px var.$c5
+                    border: solid 1px var.$c3
+                    text-align: center
 
                     p
                         color: var.$c4
@@ -138,37 +151,44 @@ main
     .project
         width: 100%
         height: 100vh
-        background: url('../img/project.jpg') no-repeat center center scroll
-        background-size: cover
 
         .conteiner-projects
             @include conteiner-geral-main()
             @include flex()
-            flex-direction: column
-            justify-content: space-evenly
+            flex-direction: row
+            justify-content: flex-start
 
             h2
                 font-size: var.$s3
+                font-family: var.$title
+                width: 30%
+                height: 100%
+                background-color: var.$c5
+                @include flex()
+                justify-content: center
 
             .conteiner-cards
-                width: 100%
+                width: 70%
+                height: 100%
                 @include flex()
-                justify-content: space-between
+                align-content: center
+                background-color: #00000060
 
                 .card
                     @include flex()
                     justify-content: center
-                    width: 200px
-                    min-height: 300px
-                    border-radius: 50px
-                    border: solid 2px var.$c5
+                    width: 150px
+                    min-height: 250px
+                    border-radius: 25px
+                    border: solid 1px var.$c5
                     background-color: #000000a2
+                    margin: 10px
 
                 a
                     line-height: 30px
                     font-weight: 400
                     font-size: 24px
-                    font-family: 'roboto'
+                    font-family: var.$titleGeral
 
                 .card:hover
                     background-color: var.$c1
@@ -180,8 +200,6 @@ main
     .contact
         width: 100%
         height: 100vh
-        background: url('../img/project2.jpg') no-repeat center center scroll
-        background-size: cover
 
         .conteiner-contact
             @include conteiner-geral-main()
@@ -198,15 +216,25 @@ main
                 align-self: center
                 margin: 40px
                 font-size: var.$s3
+                background-color: var.$c5
+                font-family: var.$title
+                width: 100%
+                height: 100%
+                @include flex()
+                justify-content: center
 
             img
                 grid-area: img
+                background-color: #00000060
+                width: 100%
+                height: 100%
+                padding: 20px
 
             form
                 grid-area: fm
+                background-color: #00000060
                 width: 100%
                 height: 100%
-
                 @include flex()
                 flex-direction: column
                 justify-content: center
@@ -237,17 +265,17 @@ main
                     cursor: pointer
                     transition-duration: 0.5s
                     font-weight: 700
-                    align-self: flex-end
+                    align-self: center
 
                 .btn:hover
                     background-color: var.$c5
-                    border-color: var.$c3
+                    border-color: var.$c1
                     color: var.$c1
 
 .link-vertical
     position: fixed
     right: 20px
-    bottom: 50px
+    bottom: 60px
     width: auto
     height: auto
 
@@ -260,7 +288,7 @@ main
     border-radius: 30px
 
     a
-        padding: 3px 2px
+        padding: 5px 3px
 
         img
             border: 2px solid var.$c2
@@ -270,8 +298,8 @@ main
             border-color: var.$c3
 
 footer
-    min-height: 10vh
-    background-color: var.$c1
+    min-height: 20vh
+    background-color: var.$c2
     @include flex()
     justify-content: center
 
@@ -324,13 +352,15 @@ footer
                     flex-direction: column
                     justify-content: space-between
                     align-items: center
-                
-                .menu a 
+
+                .menu a
                     font-family: var.$title
                     font-size: var.$s2
 
     main
         .home
+            background-image: url('../img/banner-mobile.jpg')
+
             .conteiner-home
                 h2
                     text-align: center

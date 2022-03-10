@@ -9,6 +9,7 @@
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   color: #FFFFFC;
+  box-sizing: border-box;
 }
 
 body {
@@ -45,7 +46,7 @@ header .conteiner-header .menu a {
   color: #FFFFFC;
 }
 header .conteiner-header .menu a:hover {
-  color: #FE0000;
+  color: #7812bd;
 }
 header .conteiner-header button {
   display: none;
@@ -58,7 +59,7 @@ main {
 main .home {
   width: 100%;
   height: 100vh;
-  background: black no-repeat url("../img/img-about-grande.jpg") center center scroll;
+  background: black no-repeat url("../img/banner.jpg") center center scroll;
   background-size: cover;
 }
 main .home .conteiner-home {
@@ -78,9 +79,8 @@ main .home .conteiner-home h2 {
 }
 main .about {
   width: 100%;
-  height: 100vh;
-  background: url("../img/texture.jpg") center center no-repeat scroll;
-  background-size: cover;
+  height: 70vh;
+  background-color: #181818;
 }
 main .about .conteiner-about {
   max-width: 1024px;
@@ -90,55 +90,72 @@ main .about .conteiner-about {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
+  flex-wrap: nowrap;
+  margin-bottom: 1px;
 }
 main .about .conteiner-about h2 {
   font-size: 3rem;
   font-family: "Cookie", cursive;
+  width: 30%;
+  height: 100%;
+  background-color: #7812bd;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 main .about .conteiner-about ul {
-  max-width: 100%;
-  height: auto;
+  width: 70%;
+  height: 100%;
   font-size: 1rem;
   line-height: 80px;
   list-style-position: inside;
   background-color: #00000060;
-  border-radius: 50px;
   padding: 40px;
   list-style-type: circle;
 }
 main .skills {
   width: 100%;
   height: 100vh;
-  background: url("../img/img-skills-medio.jpg") no-repeat center center scroll;
-  background-size: cover;
+  background-color: #181818;
 }
 main .skills .conteiner-skills {
   max-width: 1024px;
   min-width: 320px;
   margin: 0 auto;
   height: 100%;
-  min-height: 100%;
+  min-height: 70vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
 }
 main .skills .conteiner-skills h2 {
   font-size: 3rem;
   font-family: "Cookie", cursive;
+  width: 30%;
+  height: 100%;
+  background-color: #7812bd;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 main .skills .conteiner-skills .conteiner-cards {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 80%;
+  align-content: center;
+  width: 70%;
+  height: 100%;
+  background-color: #00000060;
 }
 main .skills .conteiner-skills .conteiner-cards .card {
   width: 150px;
-  height: 200px;
+  min-height: 250px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -148,7 +165,8 @@ main .skills .conteiner-skills .conteiner-cards .card {
   padding: 10px;
   border-radius: 30px;
   background-color: #1E1E1E;
-  border: solid 2px #FE0000;
+  border: solid 1px #FFFFFC;
+  text-align: center;
 }
 main .skills .conteiner-skills .conteiner-cards .card p {
   color: #5A595B;
@@ -156,8 +174,6 @@ main .skills .conteiner-skills .conteiner-cards .card p {
 main .project {
   width: 100%;
   height: 100vh;
-  background: url("../img/project.jpg") no-repeat center center scroll;
-  background-size: cover;
 }
 main .project .conteiner-projects {
   max-width: 1024px;
@@ -167,48 +183,57 @@ main .project .conteiner-projects {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 main .project .conteiner-projects h2 {
   font-size: 3rem;
-}
-main .project .conteiner-projects .conteiner-cards {
-  width: 100%;
+  font-family: "Cookie", cursive;
+  width: 30%;
+  height: 100%;
+  background-color: #7812bd;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+}
+main .project .conteiner-projects .conteiner-cards {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  background-color: #00000060;
 }
 main .project .conteiner-projects .conteiner-cards .card {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  min-height: 300px;
-  border-radius: 50px;
-  border: solid 2px #FE0000;
+  width: 150px;
+  min-height: 250px;
+  border-radius: 25px;
+  border: solid 1px #7812bd;
   background-color: #000000a2;
+  margin: 10px;
 }
 main .project .conteiner-projects .conteiner-cards a {
   line-height: 30px;
   font-weight: 400;
   font-size: 24px;
-  font-family: "roboto";
+  font-family: "Bebas Neue", "Cookie", cursive;
 }
 main .project .conteiner-projects .conteiner-cards .card:hover {
   background-color: #181818;
   border-color: #FFFFFC;
 }
 main .project .conteiner-projects .conteiner-cards a:hover {
-  color: #FE0000;
+  color: #7812bd;
 }
 main .contact {
   width: 100%;
   height: 100vh;
-  background: url("../img/project2.jpg") no-repeat center center scroll;
-  background-size: cover;
 }
 main .contact .conteiner-contact {
   max-width: 1024px;
@@ -227,12 +252,25 @@ main .contact .conteiner-contact h2 {
   align-self: center;
   margin: 40px;
   font-size: 3rem;
+  background-color: #7812bd;
+  font-family: "Cookie", cursive;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 main .contact .conteiner-contact img {
   grid-area: img;
+  background-color: #00000060;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
 }
 main .contact .conteiner-contact form {
   grid-area: fm;
+  background-color: #00000060;
   width: 100%;
   height: 100%;
   display: flex;
@@ -242,43 +280,43 @@ main .contact .conteiner-contact form {
   justify-content: center;
 }
 main .contact .conteiner-contact form .name {
-  border-radius: 50px;
+  border-radius: 25px;
   background-color: #5A595B;
   color: #FFFFFC;
   font-size: 1rem;
   padding: 5px 20px;
   height: 40px;
-  width: 90%;
+  width: 80%;
   margin-bottom: 10px;
 }
 main .contact .conteiner-contact form .email {
-  border-radius: 50px;
+  border-radius: 25px;
   background-color: #5A595B;
   color: #FFFFFC;
   font-size: 1rem;
   padding: 5px 20px;
   height: 40px;
-  width: 90%;
+  width: 80%;
   margin-bottom: 10px;
 }
 main .contact .conteiner-contact form .obj {
-  border-radius: 50px;
+  border-radius: 25px;
   background-color: #5A595B;
   color: #FFFFFC;
   font-size: 1rem;
   padding: 5px 20px;
   height: 40px;
-  width: 90%;
+  width: 80%;
   margin-bottom: 10px;
 }
 main .contact .conteiner-contact form .msg {
-  border-radius: 50px;
+  border-radius: 25px;
   background-color: #5A595B;
   color: #FFFFFC;
   font-size: 1rem;
   padding: 5px 20px;
   height: 40px;
-  width: 90%;
+  width: 80%;
   margin-bottom: 10px;
   padding: 20px;
   height: 100px;
@@ -291,22 +329,22 @@ main .contact .conteiner-contact form .btn {
   padding: 8px;
   color: #FFFFFC;
   font-size: 1rem;
-  border: solid 2px #FE0000;
+  border: solid 2px #7812bd;
   cursor: pointer;
   transition-duration: 0.5s;
   font-weight: 700;
-  align-self: flex-end;
+  align-self: center;
 }
 main .contact .conteiner-contact form .btn:hover {
-  background-color: #FE0000;
-  border-color: #FFFFFC;
+  background-color: #7812bd;
+  border-color: #181818;
   color: #181818;
 }
 
 .link-vertical {
   position: fixed;
   right: 20px;
-  bottom: 50px;
+  bottom: 60px;
   width: auto;
   height: auto;
   display: flex;
@@ -320,7 +358,7 @@ main .contact .conteiner-contact form .btn:hover {
   border-radius: 30px;
 }
 .link-vertical a {
-  padding: 3px 2px;
+  padding: 5px 3px;
 }
 .link-vertical a img {
   border: 2px solid #1E1E1E;
@@ -331,8 +369,8 @@ main .contact .conteiner-contact form .btn:hover {
 }
 
 footer {
-  min-height: 10vh;
-  background-color: #181818;
+  min-height: 20vh;
+  background-color: #1E1E1E;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -388,6 +426,9 @@ footer h2 {
     font-size: 2rem;
   }
 
+  main .home {
+    background-image: url("../img/banner-mobile.jpg");
+  }
   main .home .conteiner-home h2 {
     text-align: center;
     width: 50%;
