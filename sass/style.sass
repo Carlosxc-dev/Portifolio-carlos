@@ -177,33 +177,80 @@ main
             .conteiner-cards
                 width: 70%
                 height: 100%
-                @include flex()
+                display: flex
                 justify-content: center
-                align-content: center
-                background-color: #00000060
+                align-items: center
+                background-color: #0000006c
+                overflow: hidden
 
-                .card
-                    @include flex()
-                    justify-content: center
-                    width: 150px
-                    min-height: 250px
-                    border-radius: 25px
-                    border: solid 1px var.$c5
-                    background-color: #000000a2
-                    margin: 10px
+                .conteiner-slides
+                    height: 70%
+                    width: 50%
+                    position: relative
+                    display: flex
+                    overflow: hidden
 
-                a
-                    line-height: 30px
-                    font-weight: 400
-                    font-size: 24px
-                    font-family: var.$titleGeral
+                    input
+                        display: none
 
-                .card:hover
-                    background-color: var.$c1
-                    border-color: var.$c3
+                    .slide
+                        width: 90%
+                        transition: .6s
 
-                a:hover
-                    color: var.$c5
+                    .navegation
+                        position: absolute
+                        bottom: 10px
+                        left: 50%
+                        bottom: 10px
+                        transform: translateX(-50%)
+                        display: flex
+
+                        .bar
+                            width: 50px
+                            height: 17px
+                            border: 2px solid var.$c3
+                            margin: 6px
+                            border-radius: 5px
+                            cursor: pointer
+                            transition: .3s
+
+                        .bar:hover
+                            background-color: var.$c3
+
+                    #slide1:checked ~ .s1
+                        margin-left: 10%
+
+                    #slide2:checked ~ .s1
+                        margin-left: -70%
+
+                    #slide3:checked ~ .s1
+                        margin-left: -153%
+
+                    #slide4:checked ~ .s1
+                        margin-left: -238%
+
+                    .card
+                        @include flex()
+                        justify-content: center
+                        width: 250px
+                        height: 350px
+                        border-radius: 25px
+                        border: solid 1px var.$c5
+                        background-color: var.$c4
+                        margin: 20px
+
+                    a
+                        line-height: 30px
+                        font-weight: 400
+                        font-size: 24px
+                        font-family: var.$titleGeral
+
+                    .card:hover
+                        background-color: var.$c1
+                        border-color: var.$c3
+
+                    a:hover
+                        color: var.$c5
 
     .contact
         width: 100%

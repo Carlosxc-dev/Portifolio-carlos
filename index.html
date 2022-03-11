@@ -186,36 +186,57 @@
         <div class="conteiner-projects">
           <h2>Project</h2>
           <div class="conteiner-cards">
-            <a
-              class="card"
-              id="green"
-              href="https://carlosxc-dev.github.io/projeto_site_estruturaDados/"
-              target="_blank"
-              >Estrutura <br />
-              de <br />
-              Dados
-            </a>
-            <a
-              class="card"
-              href="https://carlosxc-dev.github.io/projeto_site_cordel/"
-              target="_blank"
-              >Cordel <br />
-              Moderno
-            </a>
-            <a
-              class="card"
-              id="green"
-              href="https://github.com/Carlosxc-dev/projeto_calculadora"
-              target="_blank"
-              >Projeto <br />
-              Calculadora
-            </a>
-            <a
-              class="card"
-              href="https://carlosxc-dev.github.io/Portifolio-carlos/"
-              target="_blank"
-              >Portifolio
-            </a>
+            <div class="conteiner-slides">
+              <input type="radio" name="slide" id="slide1" checked />
+              <input type="radio" name="slide" id="slide2" />
+              <input type="radio" name="slide" id="slide3" />
+              <input type="radio" name="slide" id="slide4" />
+
+              <div class="slide s1">
+                <a
+                  class="card"
+                  id="green"
+                  href="https://carlosxc-dev.github.io/projeto_site_estruturaDados/"
+                  target="_blank"
+                  >Estrutura <br />de <br />Dados</a
+                >
+              </div>
+
+              <div class="slide s2">
+                <a
+                  class="card"
+                  href="https://carlosxc-dev.github.io/projeto_site_cordel/"
+                  target="_blank"
+                  >Cordel <br />
+                  Moderno
+                </a>
+              </div>
+              <div class="slide s3">
+                <a
+                  class="card"
+                  id="green"
+                  href="https://github.com/Carlosxc-dev/projeto_calculadora"
+                  target="_blank"
+                  >Projeto <br />
+                  Calculadora
+                </a>
+              </div>
+              <div class="slide s4">
+                <a
+                  class="card"
+                  href="https://carlosxc-dev.github.io/Portifolio-carlos/"
+                  target="_blank"
+                  >Portifolio
+                </a>
+              </div>
+
+              <div class="navegation">
+                <label class='bar' for="slide1"></label>
+                <label class='bar' for="slide2"></label>
+                <label class='bar' for="slide3"></label>
+                <label class='bar' for="slide4"></label>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -243,7 +264,7 @@
     </main>
 
     <footer>
-      <h2>By <span style="color: rgb(82, 13, 114);">Carlos</span> - 2022</h2>
+      <h2>By <span style="color: rgb(82, 13, 114)">Carlos</span> - 2022</h2>
     </footer>
 
     <script src="js/index.js"></script>

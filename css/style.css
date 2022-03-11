@@ -208,35 +208,80 @@ main .project .conteiner-projects .conteiner-cards {
   width: 70%;
   height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  align-content: center;
-  background-color: #00000060;
+  align-items: center;
+  background-color: #0000006c;
+  overflow: hidden;
 }
-main .project .conteiner-projects .conteiner-cards .card {
+main .project .conteiner-projects .conteiner-cards .conteiner-slides {
+  height: 70%;
+  width: 50%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+main .project .conteiner-projects .conteiner-cards .conteiner-slides input {
+  display: none;
+}
+main .project .conteiner-projects .conteiner-cards .conteiner-slides .slide {
+  width: 90%;
+  transition: 0.6s;
+}
+main .project .conteiner-projects .conteiner-cards .conteiner-slides .navegation {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  display: flex;
+}
+main .project .conteiner-projects .conteiner-cards .conteiner-slides .navegation .bar {
+  width: 50px;
+  height: 17px;
+  border: 2px solid #FFFFFC;
+  margin: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+main .project .conteiner-projects .conteiner-cards .conteiner-slides .navegation .bar:hover {
+  background-color: #FFFFFC;
+}
+main .project .conteiner-projects .conteiner-cards .conteiner-slides #slide1:checked ~ .s1 {
+  margin-left: 10%;
+}
+main .project .conteiner-projects .conteiner-cards .conteiner-slides #slide2:checked ~ .s1 {
+  margin-left: -70%;
+}
+main .project .conteiner-projects .conteiner-cards .conteiner-slides #slide3:checked ~ .s1 {
+  margin-left: -153%;
+}
+main .project .conteiner-projects .conteiner-cards .conteiner-slides #slide4:checked ~ .s1 {
+  margin-left: -238%;
+}
+main .project .conteiner-projects .conteiner-cards .conteiner-slides .card {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  min-height: 250px;
+  width: 250px;
+  height: 350px;
   border-radius: 25px;
   border: solid 1px #7812bd;
-  background-color: #000000a2;
-  margin: 10px;
+  background-color: #5A595B;
+  margin: 20px;
 }
-main .project .conteiner-projects .conteiner-cards a {
+main .project .conteiner-projects .conteiner-cards .conteiner-slides a {
   line-height: 30px;
   font-weight: 400;
   font-size: 24px;
   font-family: "Bebas Neue", "Cookie", cursive;
 }
-main .project .conteiner-projects .conteiner-cards .card:hover {
+main .project .conteiner-projects .conteiner-cards .conteiner-slides .card:hover {
   background-color: #181818;
   border-color: #FFFFFC;
 }
-main .project .conteiner-projects .conteiner-cards a:hover {
+main .project .conteiner-projects .conteiner-cards .conteiner-slides a:hover {
   color: #7812bd;
 }
 main .contact {
