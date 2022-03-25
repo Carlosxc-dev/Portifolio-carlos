@@ -1,0 +1,43 @@
+@use 'config'
+
+main
+    .about
+        width: 100%
+        height: 70vh
+        background-color: config.$c1
+
+        .conteiner-about
+            @include config.conteiner-geral-main()
+
+            @include config.flex()
+            flex-direction: row
+            justify-content: space-evenly
+            flex-wrap: nowrap
+            margin-bottom: 1px
+
+            h2
+                width: 30%
+                height: 100%
+                background-color: config.$c5
+                @include config.flex()
+                justify-content: center
+
+                p
+                    font-size: config.$s3
+                    font-family: config.$title
+                    @include config.animation-title()
+
+
+
+            ul
+                width: 70%
+                height: 100%
+                font-size: config.$s1
+                line-height: 80px
+                list-style-position: inside
+                background-color: #00000060
+                padding: 40px
+                list-style-type: circle
+                display: flex
+                flex-direction: column
+                justify-content: center

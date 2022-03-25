@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap')
+
+$c1: #181818
+$c2: #1E1E1E
+$c3: #FFFFFC
+$c4: #5A595B
+$c5: #7812bd
+
+$subtitle: 'Roboto', sans-serif
+$title: 'Cookie', cursive
+$titleGeral: 'Bebas Neue', $title
+
+$s1: 1rem
+$s2: 2rem
+$s3: 3rem
+$s4: 4rem
+$s5: 5rem
+
+$shadow: 2px 2px 5px rgba(0, 0, 0, 0.603), -2px -2px 5px rgba(0, 0, 0, 0.521)
+
+//configuracao geral
+*
+    margin: 0
+    padding: 0
+    text-decoration: none
+    font-family: $subtitle
+    color: $c3
+    box-sizing: border-box
+
+body
+    // overflow-x: hidden
+    // overflow-y: hidden
+    background-color: $c1
+
+@mixin flex()
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+
+@mixin config-iten-form
+    border-radius: 25px
+    background-color: $c4
+    color: $c3
+    font-size: $s1
+    padding: 5px 20px
+    height: 40px
+    width: 80%
+    margin-bottom: 10px
+
+@mixin conteiner-geral-main()
+    max-width: 1024px
+    min-width: 320px
+    margin: 0 auto
+    height: 100%
+
+@mixin animation-title()
+    @keyframes flip
+        0%
+            transform: translateZ(0) translateY(0)
+            opacity: 1
+
+        60%
+            opacity: 0.8
+
+        100%
+            letter-spacing: 1rem
+            transform: translateZ(300px) translateY(-200px)
+            opacity: 0
+
+    animation: flip 2s infinite ease-in-out
+
+@mixin animation2()
+    @keyframes tracking-out-contract
+        0%
+            opacity: 1
+
+        50%
+            opacity: 1
+
+        100%
+            letter-spacing: -0.5em
+            opacity: 0
+
+    animation: tracking-out-contract 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both infinite
+
+@mixin animation-fundo()
+    @keyframes kenburns-bottom 
+        0% 
+            transform: scale(1) translateY(0)
+            transform-origin: 50% 84%
+        
+        100% 
+            transform: scale(1.25) translateY(15px)
+            transform-origin: bottom
+    animation: kenburns-bottom 3s ease-out both

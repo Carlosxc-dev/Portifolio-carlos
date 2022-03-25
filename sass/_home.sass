@@ -1,0 +1,23 @@
+@use 'config'
+
+main
+    overflow: hidden
+    min-height: auto
+
+    .home
+        width: 100%
+        height: 100vh
+        background: black no-repeat url("../img/banner.jpg") center center 
+        background-size: cover
+        @include config.animation-fundo()
+
+        .conteiner-home
+            @include config.conteiner-geral-main()
+
+            @include config.flex()
+            justify-content: center
+            align-items: center
+
+            h2
+                font-size: config.$s4
+                font-family: config.$titleGeral
