@@ -651,8 +651,12 @@ footer h2 {
     align-items: center;
     width: 100%;
   }
+  main .project .conteiner-projects .conteiner-cards .conteiner-slides {
+    width: 95%;
+  }
   main .project .conteiner-projects .conteiner-cards .card {
-    margin: 10px;
+    width: 200px !important;
+    height: 300px !important;
   }
   main .contact {
     height: auto;
