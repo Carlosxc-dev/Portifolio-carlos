@@ -74,18 +74,16 @@ body
     animation: flip 2s infinite ease-in-out
 
 @mixin animation2()
-    @keyframes tracking-out-contract
+    @keyframes swirl-in-fwd
         0%
-            opacity: 1
-
-        50%
-            opacity: 1
-
-        100%
-            letter-spacing: -0.5em
+            transform: rotate(-540deg) scale(0)
             opacity: 0
+  
+        100% 
+            transform: rotate(0) scale(1)
+            opacity: 1
 
-    animation: tracking-out-contract 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both infinite
+    animation: swirl-in-fwd 3s 2s ease-out both infinite
 
 @mixin animation-fundo()
     @keyframes kenburns-bottom 
@@ -97,3 +95,54 @@ body
             transform: scale(1.25) translateY(15px)
             transform-origin: bottom
     animation: kenburns-bottom 3s ease-out both
+
+@mixin animation-project()
+    @keyframes slide-in-tl 
+        0% 
+            transform: translateY(-1000px) translateX(-1000px)
+            opacity: 0
+        
+        100% 
+            transform: translateY(0) translateX(0)
+            opacity: 1
+
+    animation: slide-in-tl 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite
+
+@mixin animation-contact()
+    @keyframes bounce-in-top 
+        0% 
+            transform: translateY(-100px)
+            animation-timing-function: ease-in
+            opacity: 0
+        
+        38% 
+            transform: translateY(0)
+            animation-timing-function: ease-out
+            opacity: 1
+        
+        55% 
+            transform: translateY(-65px)
+            animation-timing-function: ease-in
+        
+        72%
+            transform: translateY(0)
+            animation-timing-function: ease-out
+        
+        81% 
+            transform: translateY(-28px)
+            animation-timing-function: ease-in
+        
+        90% 
+            transform: translateY(0)
+            animation-timing-function: ease-out
+        
+        95% 
+            transform: translateY(-8px)
+            animation-timing-function: ease-in
+        
+        100% 
+            transform: translateY(0)
+            animation-timing-function: ease-out
+
+    animation: bounce-in-top 2.5s both infinite
+

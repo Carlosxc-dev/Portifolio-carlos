@@ -12,13 +12,18 @@ main
             justify-content: flex-start
 
             h2
-                font-size: config.$s3
-                font-family: config.$title
+                
                 width: 30%
                 height: 100%
                 background-color: config.$c5
                 @include config.flex()
                 justify-content: center
+
+                p
+                    @include config.animation-project()
+                    font-size: config.$s3
+                    font-family: config.$title
+
 
             .conteiner-cards
                 width: 70%
