@@ -212,7 +212,6 @@ main .skills .conteiner-skills h2 p {
   animation: swirl-in-fwd 3s 2s ease-out both infinite;
   font-size: 3rem;
   font-family: "Cookie", cursive;
-  background-color: #7812bd;
 }
 @keyframes swirl-in-fwd {
   0% {
