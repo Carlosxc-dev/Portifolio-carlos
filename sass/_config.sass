@@ -57,35 +57,7 @@ body
     margin: 0 auto
     height: 100%
 
-@mixin animation-title()
-    @keyframes flip
-        0%
-            transform: translateZ(0) translateY(0)
-            opacity: 1
-
-        60%
-            opacity: 0.8
-
-        100%
-            letter-spacing: 1rem
-            transform: translateZ(300px) translateY(-200px)
-            opacity: 0
-
-    animation: flip 2s infinite ease-in-out
-
-@mixin animation2()
-    @keyframes swirl-in-fwd
-        0%
-            transform: rotate(-540deg) scale(0)
-            opacity: 0
-  
-        100% 
-            transform: rotate(0) scale(1)
-            opacity: 1
-
-    animation: swirl-in-fwd 3s 2s ease-out both infinite
-
-@mixin animation-fundo()
+@mixin animation-fundo-home()
     @keyframes kenburns-bottom 
         0% 
             transform: scale(1) translateY(0)
@@ -96,90 +68,67 @@ body
             transform-origin: bottom
     animation: kenburns-bottom 3s ease-out both
 
-@mixin animation-project()
-    @keyframes slide-in-tl 
-        0% 
-            transform: translateY(-1000px) translateX(-1000px)
-            opacity: 0
-        
-        100% 
-            transform: translateY(0) translateX(0)
-            opacity: 1
+// animation text dos blocos 
+// 
+@keyframes bounce-in-top 
+    0% 
+        transform: translateY(-100px)
+        animation-timing-function: ease-in
+        opacity: 0
+    
+    38% 
+        transform: translateY(0)
+        animation-timing-function: ease-out
+        opacity: 1
+    
+    55% 
+        transform: translateY(-65px)
+        animation-timing-function: ease-in
+    
+    72%
+        transform: translateY(0)
+        animation-timing-function: ease-out
+    
+    81% 
+        transform: translateY(-28px)
+        animation-timing-function: ease-in
+    
+    90% 
+        transform: translateY(0)
+        animation-timing-function: ease-out
+    
+    95% 
+        transform: translateY(-8px)
+        animation-timing-function: ease-in
+    
+    100% 
+        transform: translateY(0)
+        animation-timing-function: ease-out
 
-    animation: slide-in-tl 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite
+.anime.on
+    animation: bounce-in-top 2s both 
 
-@mixin animation-contact()
-    @keyframes bounce-in-top 
-        0% 
-            transform: translateY(-100px)
-            animation-timing-function: ease-in
-            opacity: 0
-        
-        38% 
-            transform: translateY(0)
-            animation-timing-function: ease-out
-            opacity: 1
-        
-        55% 
-            transform: translateY(-65px)
-            animation-timing-function: ease-in
-        
-        72%
-            transform: translateY(0)
-            animation-timing-function: ease-out
-        
-        81% 
-            transform: translateY(-28px)
-            animation-timing-function: ease-in
-        
-        90% 
-            transform: translateY(0)
-            animation-timing-function: ease-out
-        
-        95% 
-            transform: translateY(-8px)
-            animation-timing-function: ease-in
-        
-        100% 
-            transform: translateY(0)
-            animation-timing-function: ease-out
+// 
+// animacoes nos blocos -------------------------------------------------
+// 
+[data-anime] 
+  opacity: 0
+  transition: .5s
 
-    animation: bounce-in-top 2.5s both infinite
 
-@mixin animation-contactt()
-    @keyframes bounce-in-right 
-        0% 
-            transform: translateX(600px)
-            animation-timing-function: ease-in
-            opacity: 0
-        
-        38% 
-            transform: translateX(0)
-            animation-timing-function: ease-out
-            opacity: 1
-        
-        55%
-            transform: translateX(68px)
-            animation-timing-function: ease-in
-        
-        72%
-            transform: translateX(0)
-            animation-timing-function: ease-out
-        
-        81%
-            transform: translateX(32px)
-            animation-timing-function: ease-in
-        
-        90%
-            transform: translateX(0)
-            animation-timing-function: ease-out
-        
-        95% 
-            transform: translateX(8px)
-            animation-timing-function: ease-in
-        
-        100% 
-            transform: translateX(0)
-            animation-timing-function: ease-out
+[data-anime="left"] 
+  transform: translate3d(-50px, 0, 0)
 
-    animation: bounce-in-right 3s both infinite
+
+[data-anime="right"] 
+  transform: translate3d(50px, 0, 0)
+
+
+[data-anime="top"] 
+  transform: translate3d(0, -50px, 0)
+
+
+[data-anime].animate 
+  opacity: 1
+  transform: translate3d(0px, 0px, 0px)
+  
