@@ -18,6 +18,13 @@
   },
   "homepage": "https://github.com/Carlosxc-dev/Portifolio-carlos#readme",
   "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.5.2",
+    "material-icons": "^1.10.8",
     "sass": "^1.49.9"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.3"
   }
 }

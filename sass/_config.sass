@@ -32,9 +32,19 @@ $shadow: 2px 2px 5px rgba(0, 0, 0, 0.603), -2px -2px 5px rgba(0, 0, 0, 0.521)
     box-sizing: border-box
 
 body
-    // overflow-x: hidden
-    // overflow-y: hidden
     background-color: $c1
+
+body.dark
+    $c1: #FFFFFC
+    $c2: #5A595B
+    $c3: #181818
+    $c4: #1E1E1E
+    $c5: #7812bd
+
+    .icon-theme .lua
+        display: inline
+
+
 
 @mixin flex()
     display: flex
@@ -58,77 +68,72 @@ body
     height: 100%
 
 @mixin animation-fundo-home()
-    @keyframes kenburns-bottom 
-        0% 
+    @keyframes kenburns-bottom
+        0%
             transform: scale(1) translateY(0)
             transform-origin: 50% 84%
-        
-        100% 
+
+        100%
             transform: scale(1.25) translateY(15px)
             transform-origin: bottom
-    animation: kenburns-bottom 3s ease-out both
+            animation: kenburns-bottom 3s ease-out both
 
 // animation text dos blocos 
 // 
-@keyframes bounce-in-top 
-    0% 
+@keyframes bounce-in-top
+    0%
         transform: translateY(-100px)
         animation-timing-function: ease-in
         opacity: 0
-    
-    38% 
+
+    38%
         transform: translateY(0)
         animation-timing-function: ease-out
         opacity: 1
-    
-    55% 
+
+    55%
         transform: translateY(-65px)
         animation-timing-function: ease-in
-    
+
     72%
         transform: translateY(0)
         animation-timing-function: ease-out
-    
-    81% 
+
+    81%
         transform: translateY(-28px)
         animation-timing-function: ease-in
-    
-    90% 
+
+    90%
         transform: translateY(0)
         animation-timing-function: ease-out
-    
-    95% 
+
+    95%
         transform: translateY(-8px)
         animation-timing-function: ease-in
-    
-    100% 
+
+    100%
         transform: translateY(0)
         animation-timing-function: ease-out
 
 .anime.on
-    animation: bounce-in-top 2s both 
+    animation: bounce-in-top 2s both
 
 // 
 // animacoes nos blocos -------------------------------------------------
 // 
-[data-anime] 
-  opacity: 0
-  transition: .5s
+[data-anime]
+    opacity: 0
+    transition: .3s
 
+[data-anime="left"]
+    transform: translate3d(-50px, 0, 0)
 
-[data-anime="left"] 
-  transform: translate3d(-50px, 0, 0)
+[data-anime="right"]
+    transform: translate3d(50px, 0, 0)
 
+[data-anime="top"]
+    transform: translate3d(0, -50px, 0)
 
-[data-anime="right"] 
-  transform: translate3d(50px, 0, 0)
-
-
-[data-anime="top"] 
-  transform: translate3d(0, -50px, 0)
-
-
-[data-anime].animate 
-  opacity: 1
-  transform: translate3d(0px, 0px, 0px)
-  
+[data-anime].animate
+    opacity: 1
+    transform: translate3d(0px, 0px, 0px)

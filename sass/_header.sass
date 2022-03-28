@@ -20,6 +20,8 @@ header
     h1
         font-size: config.$s2
 
+    
+
     .menu
         @include config.flex()
 
@@ -31,5 +33,25 @@ header
         a:hover
             color: config.$c5
 
+        i
+            width: auto
+            height: auto
+
+        .icon-theme .lua
+            display: none
+
+        
+        .icon-theme .lua.on
+            display: block
+
+        .icon-theme .sol.off
+            display: none
+        
+
+
     button
         display: none
+
+.dark
+    background-color: config.$c3
+

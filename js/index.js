@@ -79,3 +79,23 @@ if (target.length) {
 }
 
 
+const btnIcon = document.querySelector('.icon-theme')
+const sol = document.querySelector('.icon-theme > .sol')
+const lua = document.querySelector('.icon-theme > .lua')
+const body = document.querySelector('body')
+const iconDark = document.querySelector('.dark')
+let showw = false
+
+btnIcon.addEventListener('click', ()=>{
+
+    body.classList.toggle('dark', showw)
+    showw = !showw
+    lua.classList.toggle('on')
+    sol.classList.toggle('off')
+
+
+
+})
+
+
+
